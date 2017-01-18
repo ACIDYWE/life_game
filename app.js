@@ -34,7 +34,7 @@ class Game {
 
 function loadConfig() {
 	const cfg = fs.readFileSync('config.json', 'utf-8');
-	return cfg;
+	return JSON.parse(cfg);
 }
 
 const cfg = loadConfig();
