@@ -23,10 +23,12 @@ class Game {
 	}
 
 	draw() {
-		setTimeout(this.show, this.delay);
+		setTimeout( () => {this.show()},
+					this.delay);
 	}
 
 	show() {
+		clear();
 		for(let i = 0; i < this.length; i++) {
 			console.log(this.state[i].join(''));
 		}
