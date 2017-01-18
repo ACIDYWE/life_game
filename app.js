@@ -39,6 +39,6 @@ function loadConfig() {
 
 const cfg = loadConfig();
 let game = new Game(cfg.width, 
-					cfg.length, 
-					cfg.delay);
+		cfg.length, 
+		cfg.delay);
 game.start();
