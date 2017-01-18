@@ -9,9 +9,17 @@ class Game {
 		this.width = width;
 		this.length = length;
 		this.delay = delay;
-		this.state = new Array(length);
-		for (let i = 0; i < length; i++)
+		this.state = new Array(length);  //state[length][width]
+		
+		for (let i = 0; i < length; i++) {
 			this.state[i] = new Array(width);
+		}
+		
+		for(let i = 0; i < width; i++) {
+			for(let j = 0; j < length; j++) {
+				this.state[j][i] = '+';
+			}
+		}
 	}
 
 	draw() {
@@ -19,8 +27,9 @@ class Game {
 	}
 
 	show() {
-		clear();
-		console.log(this.state);
+		for(let i = 0; i < this.length; i++) {
+			console.log(this.state[i].join(''));
+		}
 	}
 
 	start() {
